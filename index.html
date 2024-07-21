@@ -1,43 +1,435 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpit's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <h1>Pushpit's Portfolio</h1>
-    <h2>I'm a Back-end Application Developer</h2>
-    <hr />
-    <a href="./public/movie-ranking.html">Movie Ranking Project</a>
-    <br />
-    <br />
-    <img src="./assets/images/movie-ranking.png" height="258" alt="Movie Ranking Project Preview" />
-    <br />
-    <br />
-    <a href="./public/birthday-invite.html">Birthday Invite Project</a>
-    <br />
-    <br />
-    <img src="./assets/images/birthday-invite.png" height="258" alt="Birthday Invite Project Preview" />
-    <br />
-    <hr />
-    <a href="./public/about.html">About Me</a>
-    <a href="./public/contact.html">Contact Me</a>
+    <!--Header-->
+    <header class="main-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+                <!--Brand Name/Logo-->
+                <a class="navbar-brand" href="#">
+                    <h4 class="mb-0">Pushpit <span class="text-primary">Kumar</span></h4>
+                </a>
+                <!--Menu-->
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
+                    <ul class="navbar-nav mx-auto" id="menu">
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll-nav="0" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll-nav="1" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll-nav="2" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll-nav="3" href="#projects">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Contact Button-->
+                <div class="ms-auto d-none d-lg-block">
+                    <a class="colored-btn" data-scroll-nav="4" href="#contact">Contact</a>
+                </div>
+                <!--Mobile Menu Toggle-->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!--Main-->
+    <main>
+        <!--Home Secion-->
+        <section id="home" class="home-section" data-scroll-index="0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 profile-details">
+                        <p class="intro">Hi, My Name is Pushpit.</p>
+                        <h1 class="role">I'm a <span id="type-it" class="role-text">Developer</span></h1>
+                        <p class="location">Based in Gurgaon, India.</p>
+                        <div class="d-lg-inline-block d-md-inline-block d-sm-flex justify-content-sm-center align-items-sm-center flex-sm-column d-flex justify-content-center align-items-center flex-column"> <!--Provided Responsiveness to the 2 buttons. For lg, md, sm and xs layouts-->
+                            <button class="mb-2" id="resume-btn" type="button">Download Resume</button>
+                            <!--Invisible anchor tag for triggering download-->
+                            <a href="" id="download-link" style="display: none;" download="Pushpit's Resume.pdf"></a>
+                            <button id="about-btn" type="button">About Me</button>
+                            <!--Invisible anchor tag for redirecting -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 profile-img">
+                        <div class="d-flex justify-content-center align-items-center flex-column"> <!--Responsiveness for xs-screens-->
+                        <img src="./images/profile-img6.jpg" alt="Profile Image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About Section-->
+        <section id="about" class="about-section" data-scroll-index="1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 order-lg-0 order-md-1 order-sm-1 order-1"> <!--For medium,small & extra small screens move img below heading by giving order as 1-->
+                        <img src="./images/Developer.jpg" alt="Developer Coding" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center flex-column text-lg-start text-md-center text-sm-center text-center">
+                        <h3 class="heading">
+                            I'm a Developer with over 1+ years of experience.
+                        </h3>
+                        <p class="description pt-2">
+                            I am currently working at Cognizant as a .NET Developer. I have been coding since my highschool days as creating applications really fascinated me. Over time, I have gained a wealth of experience developing applications with a keen interest towards data-driven applications utilizing the power of ML and AI.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-lg-0 mt-md-5 mt-sm-5 mt-5">
+                    <div class="col-lg-6 d-flex justify-content-center flex-column text-lg-start text-md-center text-sm-center text-center">
+                        <h3 class="heading">
+                            But my real skill is playing Videogames!
+                        </h3>
+                        <p class="description pt-2">
+                            I'm a huge gaming enthusiast, it is my go-to source of entertainment. I love playing games on Playstation that have a strong narrative and compelling characters. I'm also a huge fan of Action RPGs, particularly the Souls Series by Fromsoftware.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="./images/Gaming.jpg" alt="Gaming Competetion" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Skills Section-->
+        <section id="skills" class="skills-section gradient-background" data-scroll-index="2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center pt-5 tech-stack">Tech Stack</h2>
+                    </div>
+                </div>
+                <div class="row pt-5 pb-5">
+                    <div class="col-12">
+                        <div class="skills-grid-container">
+                            <div class="skills-grid-item item-1 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/coding-icon.png" alt="Coding Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>.NET Framework</h5>
+                                    <p>ASP.NET, C#, MVC, Entity Framework, ADO.NET, CLR, OOP, Data Structures, LINQ, API, Web-Services.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-2 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/database-icon.png" alt="Database Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Databases</h5>
+                                    <p>SQL Server, MySQL, DB2. DDL, DML, DCL, DQL, TCL Statements and Stored Procedures.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-3 gradient-background">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M18.75 11.35a4.32 4.32 0 0 1-.79-.08 3.9 3.9 0 0 1-.73-.23l-.17-.04h-.12q-.15 0-.15.21v.33a.43.43 0 0 0 0 .19.5.5 0 0 0 .21.19 3 3 0 0 0 .76.26 4.38 4.38 0 0 0 1 .12 3 3 0 0 0 1-.14 1.94 1.94 0 0 0 .73-.37 1.81 1.81 0 0 0 .49-.58 1.79 1.79 0 0 0 .17-.78 1.54 1.54 0 0 0-.3-.93 2.15 2.15 0 0 0-1-.64l-.95-.3a2 2 0 0 1-.73-.36.65.65 0 0 1-.2-.47.66.66 0 0 1 .31-.6 1.82 1.82 0 0 1 .89-.18 2.89 2.89 0 0 1 1.27.26.79.79 0 0 0 .26.08c.1 0 .15-.08.15-.22v-.36a.38.38 0 0 0-.06-.22.56.56 0 0 0-.2-.16 1.55 1.55 0 0 0-.28-.12 3.44 3.44 0 0 0-.38-.11l-.44-.1A3.4 3.4 0 0 0 19 6a2.82 2.82 0 0 0-.83.11 2.19 2.19 0 0 0-.7.35A1.61 1.61 0 0 0 17 7a1.5 1.5 0 0 0-.18.74 1.6 1.6 0 0 0 .33 1 2.08 2.08 0 0 0 1.06.68l1 .3a1.58 1.58 0 0 1 .67.34.66.66 0 0 1 .18.47.72.72 0 0 1-.35.63 1.83 1.83 0 0 1-.96.19zM12.94 6.5a.48.48 0 0 0-.13-.26.37.37 0 0 0-.26-.07H12a.43.43 0 0 0-.26.07.42.42 0 0 0-.13.26l-1 4.4-1.14-4.4a.48.48 0 0 0-.14-.26s-.13-.07-.26-.07h-.65c-.11 0-.16.06-.16.17a1.22 1.22 0 0 0 .06.27l1.56 5.14A.61.61 0 0 0 10 12a.45.45 0 0 0 .26.06h.57a.49.49 0 0 0 .27-.06.57.57 0 0 0 .12-.27l1-4.28 1 4.29a.42.42 0 0 0 .12.26.4.4 0 0 0 .27.07h.57a.41.41 0 0 0 .25-.07.44.44 0 0 0 .14-.26l1.61-5.14a.73.73 0 0 0 0-.16.52.52 0 0 0 0-.11.15.15 0 0 0-.17-.17h-.62a.45.45 0 0 0-.26.07.68.68 0 0 0-.13.26L14 11zM5.77 8.63a5.92 5.92 0 0 0-.71-.05 2.42 2.42 0 0 0-1.63.52 1.72 1.72 0 0 0-.6 1.37 1.7 1.7 0 0 0 .49 1.28 1.82 1.82 0 0 0 1.33.48 2.48 2.48 0 0 0 2-.92 3.5 3.5 0 0 0 .2.39 2.34 2.34 0 0 0 .24.31.26.26 0 0 0 .37 0l.42-.28a.28.28 0 0 0 .13-.2.27.27 0 0 0 0-.16 3.63 3.63 0 0 1-.21-.47 2 2 0 0 1-.07-.6V8.19a2.2 2.2 0 0 0-.55-1.64A2.42 2.42 0 0 0 5.33 6a3.9 3.9 0 0 0-1 .13 3.9 3.9 0 0 0-.84.3.47.47 0 0 0-.18.14.37.37 0 0 0 0 .23v.33c0 .14 0 .2.14.2a.26.26 0 0 0 .11 0l.23-.08A4.32 4.32 0 0 1 4.42 7a3 3 0 0 1 .72-.09 1.5 1.5 0 0 1 1.08.31 1.46 1.46 0 0 1 .31 1.06v.49zm.78.9v.27a2.36 2.36 0 0 1-.07.58 1.06 1.06 0 0 1-.23.43 1.38 1.38 0 0 1-.63.42 2.12 2.12 0 0 1-.68.12.94.94 0 0 1-.7-.24.92.92 0 0 1-.24-.71.92.92 0 0 1 .33-.76 1.52 1.52 0 0 1 1-.27h.62a5.67 5.67 0 0 1 .6.16zM19.76 15a19.68 19.68 0 0 1-7.55 1.54 20 20 0 0 1-9.9-2.62c-.24-.15-.43.1-.22.29A14.68 14.68 0 0 0 12 18a14.4 14.4 0 0 0 8.1-2.47c.34-.31.03-.72-.34-.53z"></path><path d="M18.38 14.06c-.19.14-.16.33.05.3.71-.09 2.28-.27 2.56.09s-.31 1.83-.58 2.49c-.08.2.1.28.28.13a3.9 3.9 0 0 0 1.23-3.34 3.94 3.94 0 0 0-3.54.33z"></path></svg>
+                                </div>
+                                <div class="content">
+                                    <h5>AWS Services</h5>
+                                    <p>EC2, VPC, IAM, S3, RDS, CloudTrail, CloudWatch, TrustedAdvisor, CloudFormation, EBS, EFS, Route 53.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-4 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/linux-icon.png" alt="Linux Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Linux & Networking</h5>
+                                    <p>Linux Commands, File System, System Administration, IP Addresses, Subnetting.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-5 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/python-icon.png" alt="Python Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Python</h5>
+                                    <p>Lists, Tuples, Dictionaries, Tkinter, Decorators, Generators, Regex, Lambda Functions, File Handling.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-6 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/webdev-icon.png" alt="Paint Brush Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Web Development</h5>
+                                    <p>HTML, CSS, Responsive Web Design, Media Queries, Flexbox, Grid System, BootStrap, JavaScript, jQuery.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-7 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/data-science-icon.png" alt="Data Science Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Data Analytics, ML & AI</h5>
+                                    <p>Data Collection, Feature Engineering, Model Building, Gen AI, Prompt Engineering.</p>
+                                </div>
+                            </div>
+                            <div class="skills-grid-item item-8 gradient-background">
+                                <div class="icon">
+                                    <img src="./images/tools-icon.png" alt="Tools Icon">
+                                </div>
+                                <div class="content">
+                                    <h5>Tools & Softwares</h5>
+                                    <p>Visual Studio, VS Code, Git, GitHub, Azure DevOps, GitHub Copilot, Kaggle, Jupyter NoteBook, MS Office.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Projects Section-->
+        <section id="projects" class="projects-section" data-scroll-index="3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center projects-heading">Projects</h2>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div id="projects-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="8000">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card first-card">
+                                                    <img src="./images/project1-img.png" class="card-img-top img-fluid" alt="Todo List Project" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Todo List Web-App</h5>
+                                                        <p class="card-text">A simple Todo List web-app developed using C#, MVC and Entity Framework.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/Todo-List-MVC-Web-App" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project2-img.jpg" class="card-img-top img-fluid" alt="Flight Price Predictor Project">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Flight Price Predictor</h5>
+                                                        <p class="card-text">Web-app built using Python & ML used to predict flight prices in India.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/FlightPricePredictor" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project3-img.jpg" class="card-img-top img-fluid" alt="Bank Note Authentication Project">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Bank Note Authentication</h5>
+                                                        <p class="card-text">Web-app built using ML to determine the authenticity of Bank Notes.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/BankNoteAuthentication" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="8000">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card first-card">
+                                                    <img src="./images/project4-img.jpg" class="card-img-top img-fluid" alt="Rainfall Predictor Project" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Rainfall Predictor</h5>
+                                                        <p class="card-text">ML Web-app that is used to identify the occurence of Rainfall in Australia.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/Rainfall-Prediction" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project5-img.jpg" class="card-img-top img-fluid" alt="Forest Cover Classification Project">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Forest Cover Classification</h5>
+                                                        <p class="card-text">Web-app built using Python & ML to identify different type of trees in a forest.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/ForestCoverClassification" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project6-img.jpg" class="card-img-top img-fluid" alt="Iris Flower Classification Project">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Iris Flower Classification</h5>
+                                                        <p class="card-text">Classic ML problem developed as a web-app to classify the type of Iris Flower.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/IrisFlowerPredictor" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="8000">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card first-card">
+                                                    <img src="./images/project7-img2.png" class="card-img-top img-fluid" alt="Resume Project" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Resume Builder</h5>
+                                                        <p class="card-text">My Simple Resume layout built using basic HTML, CSS and BootStrap.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/Online-Resume" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project8-img.jpg" class="card-img-top img-fluid" alt="Car Price Prediction Project">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Car Price Predictor</h5>
+                                                        <p class="card-text">Web-app utilizing Python & ML to predict the selling price of used cars in India.</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar/CarPricePrediction" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="card">
+                                                    <img src="./images/project9-img.jpg" class="card-img-top img-fluid" alt="More Projects Coming Soon">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">More projects coming soon</h5>
+                                                        <p class="card-text">I'll be adding more projects soon. Check them out on my GitHub Account!</p>
+                                                        <div class="github-link">
+                                                            <a href="https://github.com/PushpitKumar" target="_blank" class="github-button">
+                                                                <img src="./images/github-icon.png" alt="GitHub Icon">
+                                                                <p>GitHub</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="carousel-indicator">
+                            <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section" data-scroll-index="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="contact-header">
+                            <h2 class="contact-heading">Get In Touch</h2>
+                            <p class="contact-invite">If you love gaming as much as I do.</p>
+                            <p class="contact-para">Love gaming as much as I do? Let's talk about it over a coffee.</p>
+                            <p class="contact-para">We can code and game together!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="contact-main">
+                            <a href="mailto:pk99manu@gmail.com" class="gmail-button">
+                                <img src="./images/icons8-gmail-logo-50.png" class="gmail-icon img-fluid" alt="Gmail Icon">
+                                <p>pk99manu@gmail.com</p>  
+                            </a>                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/pushpit-kumar/" target="_blank"><img src="./images/linkedin-icon.png"></a>
+                        <a href="https://github.com/PushpitKumar" target="_blank"><img src="./images/github-icon.png"></a>
+                        <a href="https://x.com/Pushpit_99" target="_blank"><img src="./images/twitter-icon.png"></a>
+                        <a href="https://instagram.com/pushpit_99/?igshid=ZDdkNTZiNTM" target="_blank"><img src="./images/instagram-icon.png"></a>
+                        <a href="https://facebook.com/pushpit.kumar.9?mibextid=ZbWKwL" target="_blank"><img src="./images/facebook-icon.png"></a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="copyright">
+                        <p>© Pushpit Kumar. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="scrollIt.js" type="text/javascript"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
