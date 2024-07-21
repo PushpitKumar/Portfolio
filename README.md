@@ -1,3 +1,2 @@
 # Portfolio
-Portfolio Website. Will update it soon
-https://pushpitkumar.github.io/Portfolio/
+My Portfolio. Built using HTML, CSS, JS and Bootstrap: https://pushpitkumar.github.io/Portfolio/
