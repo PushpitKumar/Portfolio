@@ -8,17 +8,28 @@
     body {
       background-color: #FFFAE5;
       font-family: monospace;
+      display: flex;
+      flex-direction: column;
     }
 
     strong {
       color: #FF651C;
     }
 
-    p {
-      text-wrap: balance;
-      white-space: pre-wrap;
+    p.type-it {
+      font-size: 16px;
+      line-height: 1.5;
+      padding-left: 50px;
+      padding-right: 50px;
+      text-wrap: pre-wrap;
     }
 
+    @media (max-width: 400px) {
+      p.type-it {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
     /*Cursor styles*/
     .typing-cursor::after {
       content: '|';
@@ -36,7 +47,7 @@
 <body>
 <h1 style="text-align:center;">About <p style="color: #FF651C; display: inline;">Me</p></h1>
 
-<p class="type-it" data-text="Hi, My name is Pushpit. I am an <strong>Application Developer</strong> at Cognizant since March 2023. My primary focus has been on projects utilizing the <strong>.NET Framework</strong> with C# and implementing back-end logic using Stored Procedures in SQL Server. During my tenure, I have developed a <strong>Batch Job</strong> to extract the latest employee resumes and transfer them to an SFTP location. Originally, these resumes were sourced from ECM (Enterprise Content Management System) and, as of February 2024, they are sourced from OCM (Oracle Content Management System). Additionally, I have designed an ASP.NET <strong>Web-API</strong> that is consumed by another application team, providing them with the last approved skill date of associates. Furthermore, I've built a <strong>WCF</strong> service to deliver last approved skill date information of associates in bulk. I have also contributed significantly to our main web application, involving UI enhancements and a complete overhaul of backend logic to align with project requirements. Currently, I am developing a <strong>chatbot</strong> using <strong>Azure OpenAI</strong> capable of summarizing and categorizing information from documents indexed in <strong>Cognitive Search Index</strong>. Previously, I participated in a 1-month remote internship with <strong>Brainnest</strong> as a <strong>Python Developer</strong>."></p>
+<p class="type-it" data-text="Hi, My name is Pushpit. I am an <strong>Application Developer</strong> at Cognizant since March 2023. My primary focus has been on projects utilizing the <strong>.NET Framework</strong> with C# and implementing back-end logic using Stored Procedures in SQL Server. During my tenure, I have developed a <strong>Batch Job</strong> to extract the latest employee resumes and transfer them to an SFTP location. Originally, these resumes were sourced from ECM (Enterprise Content Management System) and, as of February 2024, they are sourced from OCM (Oracle Content Management System). Additionally, I have designed an ASP.NET <strong>Web-API</strong> that is consumed by another application team, providing them with the last approved skill date of associates. Furthermore, I've built a <strong>WCF</strong> service to deliver last approved skill date information of associates in bulk. I have also contributed significantly to our main web application, involving UI enhancements, developing new functionalities, security fixes <strong>(CAST, SAST, DAST, OSS & MASA)</strong> and a complete overhaul of backend logic to align with project requirements. Currently, I am developing a <strong>chatbot</strong> using <strong>Azure OpenAI</strong> capable of summarizing and categorizing information from documents indexed in <strong>Cognitive Search Index</strong>. Previously, I participated in a 1-month remote internship with <strong>Brainnest</strong> as a <strong>Python Developer</strong>."></p>
 
 <br/>
 
@@ -48,14 +59,14 @@
 
 <br/>
 
-<p class="type-it" data-text="My journey into Web Development began during my internship at Cognizant, where I received training in the <strong>MVC</strong> framework. Using this knowledge, I developed a <strong>Todo List</strong> Web Application, marking a significant milestone in my career. I am currently honing my front-end skills with the goal of enhancing the aesthetics of my web-apps. In addition, I have crafted my own <strong>portfolio</strong> website to showcase my projects and newly acquired skills. Feel free to explore my GitHub account for more details!"></p>
+<p class="type-it" data-text="My journey into Web Development began during my internship at Cognizant, where I received training in the <strong>MVC</strong> framework. Using this knowledge, I developed a <strong>Todo List</strong> Web Application, marking a significant milestone in my career. I am currently honing my front-end skills with the goal of enhancing the aesthetics of my web-apps. In addition, I have crafted my own <strong>portfolio</strong> website to showcase my projects and newly acquired skills. Recently, I have developed my <strong>personal blog</strong> website using <strong>Node JS, Express JS and EJS templates</strong>. Feel free to explore my GitHub account for more details!"></p>
 
 <br/>
   
 <p class="type-it" data-text="Beyond my professional interests, I enjoy gaming on my PS5 whenever time allows. My passion for video-games dates back to my childhood, starting with classic handhelds like Gameboy and PSP. I gravitate towards story-driven games with strong characterization and immersive world-building. Action-Adventure RPGs, especially the <strong>Souls series</strong>, hold a special place in my heart—<strong>Elden Ring</strong> has consumed countless hours of my time! Aside from gaming, I find solace in music, enjoying both Hindi and English songs. I maintain a healthy routine by taking evening walks and exercising regularly. Despite being in Gurgaon, I often find myself longing for more social connections. I plan to pursue higher studies abroad, which I hope will broaden my social circle and alleviate this sense of isolation.  While remote work offers efficiency and flexibility, it can sometimes impact one's social life. Nonetheless, I've shared a glimpse of myself, and if you've read this far, Thank You for your time!"></p>
   
 
-<p class="type-it" data-text="Feel free to connect with me on LinkedIn or drop a mail and I'll be happy to oblige."></p>
+<p class="type-it" data-text="Feel free to connect with me on LinkedIn or drop a mail and I'll be happy to oblige!"></p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="./type-it.js"></script>
